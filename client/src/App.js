@@ -5,7 +5,7 @@ import getWeb3 from "./getWeb3";
 import "./App.css";
 
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
+  state = { storageValue: 0, web3: null, accounts: null, contract: null};
 
   componentDidMount = async () => {
     try {
@@ -26,7 +26,7 @@ class App extends Component {
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.runExample);
+      this.setState({ web3, accounts, contract: instance },this.start);
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -36,19 +36,38 @@ class App extends Component {
     }
   };
 
-  runExample = async () => {
+  start =  async () =>{
     const { accounts, contract } = this.state;
-
-    // Stores a given value, 5 by default.
-    await contract.methods.set("hello").send({ from: accounts[0] });
-
-    // Get the value from the contract to prove it worked.
     const response = await contract.methods.get().call();
-
-    // Update state with the result.
     this.setState({ storageValue: response });
-  };
+  }
 
+  // runExample = async () => {
+  //   const { accounts, contract } = this.state;
+
+  //   // Stores a given value, 5 by default.
+  //   await contract.methods.set("hello").send({ from: accounts[0] });
+
+  //   // Get the value from the contract to prove it worked.
+  //   const response = await contract.methods.get().call();
+
+  //   // Update state with the result.
+  //   this.setState({ storageValue: response });
+  // };
+
+  deposit = async (value)=>{ 
+    const { accounts, contract } = this.state;
+    await contract.methods.deposit(value).send({ from: accounts[0] });
+    const response = await contract.methods.get().call();
+    this.setState({ storageValue: response });
+  }
+
+  spend = async (value)=>{
+    const { accounts, contract } = this.state;
+    await contract.methods.spend(value).send({ from: accounts[0] });
+    const response = await contract.methods.get().call();
+    this.setState({ storageValue: response });
+  }
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
@@ -65,7 +84,16 @@ class App extends Component {
         <p>
           Try changing the value stored on <strong>line 40</strong> of App.js.
         </p>
-        <div>The stored value is: {this.state.storageValue}</div>
+        <span>Value : {this.state.storageValue}</span>
+        {/* <label for="input"></label> */}
+        <input type="number" name="input" id="inputValue"/>
+        <button onClick={()=>{
+          let value = document.getElementById("inputValue").value;
+          this.deposit(value);
+        }}>Deposit</button>
+        <button onClick={()=>{
+          this.spend(300);
+        }}>Pay</button>
       </div>
     );
   }

@@ -2,14 +2,11 @@ pragma solidity >=0.4.21 <0.7.0;
 
 contract MyContract {
 
-int value;
+   int value;
 
   constructor() public {
       value = 500;
   }
-
-
-
 
   function get() public view returns(int){
       return value;
