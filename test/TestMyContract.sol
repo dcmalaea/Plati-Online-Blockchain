@@ -9,11 +9,11 @@ contract TestMyContract {
   function testItStoresAValue() public {
     MyContract MyContract = MyContract(DeployedAddresses.MyContract());
 
-    MyContract.set('myValue');
+    MyContract.deposit(300);
 
-    string memory expected = 'myValue';
+    int expected = 800;
 
-    Assert.equal(MyContract.get(), expected, "It should store the value myValue.");
+    Assert.equal(MyContract.get(), expected, "It should store the value 800.");
   }
 
 }

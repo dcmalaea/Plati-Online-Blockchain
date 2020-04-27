@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import MyContract from "./build/MyContract.json";
 import getWeb3 from "./getWeb3";
+import FormFactura from './FormFactura/FormFactura'
+import Balance from './Balance/Balance'
 
 import "./App.css";
 
@@ -22,7 +24,7 @@ class App extends Component {
         MyContract.abi,
         deployedNetwork && deployedNetwork.address,
       );
-      instance.options.address = "0x57266B7C5d3e1c42ac46A2417DFd4e293cc512b2"
+      instance.options.address = "0x15E88F50c10FEBdECFdA45db39631Fb6e88F79B1"
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
@@ -42,18 +44,6 @@ class App extends Component {
     this.setState({ storageValue: response });
   }
 
-  // runExample = async () => {
-  //   const { accounts, contract } = this.state;
-
-  //   // Stores a given value, 5 by default.
-  //   await contract.methods.set("hello").send({ from: accounts[0] });
-
-  //   // Get the value from the contract to prove it worked.
-  //   const response = await contract.methods.get().call();
-
-  //   // Update state with the result.
-  //   this.setState({ storageValue: response });
-  // };
 
   deposit = async (value)=>{ 
     const { accounts, contract } = this.state;
@@ -68,32 +58,18 @@ class App extends Component {
     const response = await contract.methods.get().call();
     this.setState({ storageValue: response });
   }
+
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
     return (
       <div className="App">
-        <h1>Good to Go!</h1>
-        <p>Your Truffle Box is installed and ready.</p>
-        <h2>Smart Contract Example</h2>
-        <p>
-          If your contracts compiled and migrated successfully, below will show
-          a stored value of "hello" (by default).
-        </p>
-        <p>
-          Try changing the value stored on <strong>line 40</strong> of App.js.
-        </p>
-        <span>Value : {this.state.storageValue}</span>
-        {/* <label for="input"></label> */}
-        <input type="number" name="input" id="inputValue"/>
-        <button onClick={()=>{
-          let value = document.getElementById("inputValue").value;
-          this.deposit(value);
-        }}>Deposit</button>
-        <button onClick={()=>{
-          this.spend(300);
-        }}>Pay</button>
+
+          <div className="floatRight">
+            <Balance deposit={this.deposit} storageValue={this.state.storageValue}></Balance>
+          </div>
+          <FormFactura spend={this.spend}/>
       </div>
     );
   }

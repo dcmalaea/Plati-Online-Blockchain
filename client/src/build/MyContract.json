@@ -53,13 +53,13 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"int256\",\"name\":\"amt\",\"type\":\"int256\"}],\"name\":\"deposit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"int256\",\"name\":\"amt\",\"type\":\"int256\"}],\"name\":\"spend\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/DC/Desktop/Blockchain/contracts/MyContract.sol\":\"MyContract\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/DC/Desktop/Blockchain/contracts/MyContract.sol\":{\"keccak256\":\"0xe40e471f5a40272be48126e4a69f29526364b8fc49bb11ad6dbc1c6575dc46b7\",\"urls\":[\"bzz-raw://f91d697d7dbdc09b558f767f451c6c90f8f2eaeedcdd314fc67f80b4de047da3\",\"dweb:/ipfs/QmW66i9ENrtkctDVgH45HiEFd9c4Pee2KG6LrhgKXykvGp\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506101f460005560e1806100256000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c80636d4ce63c1460415780637ead1f55146059578063f04991f0146075575b600080fd5b6047608f565b60408051918252519081900360200190f35b607360048036036020811015606d57600080fd5b50356095565b005b607360048036036020811015608957600080fd5b503560a1565b60005490565b60008054919091039055565b60008054909101905556fea265627a7a72315820293e8a52d170b204731165d9bf844fd27209214d7741c80701bc004f837a01f664736f6c634300050c0032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c80636d4ce63c1460415780637ead1f55146059578063f04991f0146075575b600080fd5b6047608f565b60408051918252519081900360200190f35b607360048036036020811015606d57600080fd5b50356095565b005b607360048036036020811015608957600080fd5b503560a1565b60005490565b60008054919091039055565b60008054909101905556fea265627a7a72315820293e8a52d170b204731165d9bf844fd27209214d7741c80701bc004f837a01f664736f6c634300050c0032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"int256\",\"name\":\"amt\",\"type\":\"int256\"}],\"name\":\"deposit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"int256\",\"name\":\"amt\",\"type\":\"int256\"}],\"name\":\"spend\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/DC/Desktop/Blockchain/contracts/MyContract.sol\":\"MyContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/DC/Desktop/Blockchain/contracts/MyContract.sol\":{\"keccak256\":\"0xe40e471f5a40272be48126e4a69f29526364b8fc49bb11ad6dbc1c6575dc46b7\",\"urls\":[\"bzz-raw://f91d697d7dbdc09b558f767f451c6c90f8f2eaeedcdd314fc67f80b4de047da3\",\"dweb:/ipfs/QmW66i9ENrtkctDVgH45HiEFd9c4Pee2KG6LrhgKXykvGp\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101f460005560e1806100256000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c80636d4ce63c1460415780637ead1f55146059578063f04991f0146075575b600080fd5b6047608f565b60408051918252519081900360200190f35b607360048036036020811015606d57600080fd5b50356095565b005b607360048036036020811015608957600080fd5b503560a1565b60005490565b60008054919091039055565b60008054909101905556fea265627a7a72315820ede84c07875cf81af6d06c1bc99354338325c67f1ddf51a545537cd8626e7b6b64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c80636d4ce63c1460415780637ead1f55146059578063f04991f0146075575b600080fd5b6047608f565b60408051918252519081900360200190f35b607360048036036020811015606d57600080fd5b50356095565b005b607360048036036020811015608957600080fd5b503560a1565b60005490565b60008054919091039055565b60008054909101905556fea265627a7a72315820ede84c07875cf81af6d06c1bc99354338325c67f1ddf51a545537cd8626e7b6b64736f6c63430005100032",
   "sourceMap": "36:312:1:-;;;80:47;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;118:3:1;110:5;:11;36:312;;;;;;",
   "deployedSourceMap": "36:312:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:312:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;133:66;;;:::i;:::-;;;;;;;;;;;;;;;;277;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;277:66:1;;:::i;:::-;;205:68;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;205:68:1;;:::i;133:66::-;168:3;188:5;133:66;:::o;277:::-;326:5;;;:11;;;;318:19;;277:66::o;205:68::-;256:5;;;:11;;;248:19;;205:68::o",
   "source": "pragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract MyContract {\r\n\r\n   int value;\r\n\r\n  constructor() public {\r\n      value = 500;\r\n  }\r\n\r\n  function get() public view returns(int){\r\n      return value;\r\n  }\r\n\r\n  function deposit(int amt) public{\r\n\r\n      value = value + amt;\r\n  }\r\n  function spend(int amt) public{\r\n\r\n      value = value - amt;\r\n  }\r\n\r\n}\r\n",
-  "sourcePath": "C:/Users/DC/Desktop/Blockchain/contracts/MyContract.sol",
+  "sourcePath": "C:\\Users\\DC\\Desktop\\Blockchain\\contracts\\MyContract.sol",
   "ast": {
     "absolutePath": "/C/Users/DC/Desktop/Blockchain/contracts/MyContract.sol",
     "exportedSymbols": {
@@ -1080,24 +1080,24 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
     "42": {
       "events": {},
       "links": {},
-      "address": "0x57266B7C5d3e1c42ac46A2417DFd4e293cc512b2",
-      "transactionHash": "0x6577ca423409660e13b72f07604264e718b3a6025c538bec8a8259cd58b63dd4"
+      "address": "0x15E88F50c10FEBdECFdA45db39631Fb6e88F79B1",
+      "transactionHash": "0x0108774a54551cf9dd86e252a4ca767564d82bab4943bbfff521a1670bdcbf67"
     },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x57266B7C5d3e1c42ac46A2417DFd4e293cc512b2",
-      "transactionHash": "0xefd152483c02748fb233f125a36fe5b01c9f2ce3994773a26842a3255f5e747b"
+      "address": "0x02b36a2f28056089924DeAE05Cd1Dbae552eF30A",
+      "transactionHash": "0x6a4da947d7ed2af572227a78e959b2d0dfd18e05499b518e453312182e056d86"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-04-26T16:34:21.854Z",
+  "updatedAt": "2020-04-27T14:08:28.655Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

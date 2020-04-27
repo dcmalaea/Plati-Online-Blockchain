@@ -1,0 +1,23 @@
+body{
+    background: #A1FFCE;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.mainForm{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.codFactura{
+    width: 200px !important;
+    margin: 20px !important;
+}
+.totalPlata{
+    margin: 20px !important;
+    font-weight: 600;
+}
+.bttn{
+    margin: 10px !important;
+}
