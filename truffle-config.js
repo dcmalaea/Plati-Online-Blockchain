@@ -1,6 +1,6 @@
 const path = require("path");
-require('dotenv').config()
-const HDWalletProvider = require('@truffle/hdwallet-provider');
+require('./client/node_modules/dotenv').config()
+const HDWalletProvider = require('./client/node_modules/@truffle/hdwallet-provider');
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>

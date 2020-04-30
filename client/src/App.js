@@ -24,7 +24,14 @@ class App extends Component {
         MyContract.abi,
         deployedNetwork && deployedNetwork.address,
       );
-      instance.options.address = "0x15E88F50c10FEBdECFdA45db39631Fb6e88F79B1"
+
+      /**
+       * La fiecare schimbare a contractului, sa rulezi:
+       *    truffle migrate --network kovan --reset
+       * 
+       * Si sa copiezi contract address-ul aferent contractului modificat aici!
+       */
+      instance.options.address = "0x74aD310638b5c5efaa5ADBD1dEFB2C53F5544912"
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
@@ -40,7 +47,7 @@ class App extends Component {
 
   start =  async () =>{
     const { accounts, contract } = this.state;
-    const response = await contract.methods.get().call();
+    const response = await contract.methods.getBalance().call({ from: accounts[0] });
     this.setState({ storageValue: response });
   }
 
@@ -48,14 +55,14 @@ class App extends Component {
   deposit = async (value)=>{ 
     const { accounts, contract } = this.state;
     await contract.methods.deposit(value).send({ from: accounts[0] });
-    const response = await contract.methods.get().call();
+    const response = await contract.methods.getBalance().call({ from: accounts[0] });
     this.setState({ storageValue: response });
   }
 
   spend = async (value)=>{
     const { accounts, contract } = this.state;
     await contract.methods.spend(value).send({ from: accounts[0] });
-    const response = await contract.methods.get().call();
+    const response = await contract.methods.getBalance().call({ from: accounts[0] });
     this.setState({ storageValue: response });
   }
 

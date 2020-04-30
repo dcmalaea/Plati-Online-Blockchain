@@ -2,23 +2,20 @@ pragma solidity >=0.4.21 <0.7.0;
 
 contract MyContract {
 
-   int value;
+    mapping(address => int) public balances;
 
-  constructor() public {
-      value = 500;
-  }
+    function getBalance() public view returns(int)  {
 
-  function get() public view returns(int){
-      return value;
-  }
+        return balances[msg.sender];
+    }
 
-  function deposit(int amt) public{
+    function deposit(int ammount) public {
 
-      value = value + amt;
-  }
-  function spend(int amt) public{
+        balances[msg.sender] += ammount;
+    }
 
-      value = value - amt;
-  }
+    function spend(int ammount) public{
 
+        balances[msg.sender] -= ammount;
+    }
 }
