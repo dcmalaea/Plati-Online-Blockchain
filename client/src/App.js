@@ -31,7 +31,7 @@ class App extends Component {
        * 
        * Si sa copiezi contract address-ul aferent contractului modificat aici!
        */
-      instance.options.address = "0x74aD310638b5c5efaa5ADBD1dEFB2C53F5544912"
+      instance.options.address = "0x3Ab082449e8BBF270DaFd072ae43bfef7A609Ab7"
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.

@@ -23,7 +23,7 @@ module.exports = {
                      process.env.MNEMONIC,
                      process.env.KOVAN_URL
                     ),
-      gas: 300000, 
+      gas: 3000000, 
       gasPrice: 100000000000,
       network_id: 42 //kovan network id
  },
