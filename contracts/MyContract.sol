@@ -31,6 +31,15 @@ contract MyContract {
         // returneaza soldul celui care a trimis tranzactia pe blockchain
         return balances[msg.sender];
     }
+    function getClientName() public view returns(string memory) {
+
+        return users[msg.sender];
+    }
+
+    function getCompanyName() public view returns (string memory)
+    {
+        return companies[msg.sender];
+    }
 
     function deposit(int ammount) public {
 

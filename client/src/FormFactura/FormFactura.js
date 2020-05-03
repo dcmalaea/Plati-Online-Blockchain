@@ -19,7 +19,7 @@ export default function FormFactura(props) {
   const [totalPlata,setTotalPlata] = useState(0);
   const classes = useStyles();
   return (
-    <form className="mainForm" noValidate autoComplete="off">
+    <form className="mainForm greybackground" noValidate autoComplete="off">
       <TextField id="standard-basic" label="Cod factura" className="codFactura"  onChange={(e)=>{
           setCodFactura(e.target.value);
       }}/>
