@@ -130,10 +130,20 @@ export default function Menu(props) {
                                 setCompanieFactura(bill[4]);
                             }
                             else{
-                                setNotFound(true)
+                                setNotFound(true);
+                                setStatusFactura("");
+                                setCodFactura("");
+                                setTotalPlata("");
+                                setClientFactura("");
+                                setCompanieFactura("");
                             }
                         }).catch(error=>{
-                            setNotFound(true)
+                            setNotFound(true);
+                            setStatusFactura("");
+                            setCodFactura("");
+                            setTotalPlata("");
+                            setClientFactura("");
+                            setCompanieFactura("");
                         })
                     
                     }
