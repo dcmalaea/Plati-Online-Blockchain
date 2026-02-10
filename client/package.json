@@ -8,7 +8,7 @@
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-scripts": "^3.4.1",
-    "web3": "1.2.2"
+    "web3": "4.16.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,7 +21,7 @@
     "dotenv": "8.2.0",
     "ganache-cli": "6.9.1",
     "truffle": "4.1.4",
-    "@truffle/hdwallet-provider": "^1.0.32",
+    "@truffle/hdwallet-provider": "^1.7.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-bignumber": "^3.0.0"
